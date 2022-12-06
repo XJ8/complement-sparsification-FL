@@ -7,7 +7,11 @@ This project uses Flower and TensorFlow/Keras to simulate CS.
 ## Dataset
 This project uses LEAF dataset from https://github.com/TalwalkarLab/leaf. 
 Please download FEMNIST dataset following the instructions in LEAF. To fully reproduce the results, please be noted that we use the full dataset with non-iid setting. i.e. ./preprocess.sh -s niid --sf 1.0 -k 0 -t sample.
-Please run generate_flower_data.py to generate the data for Flower from LEAF. Make sure to change "out_path", "train_data_dir", "test_data_dir" in the script, and be free to change "split". 
+To generate the data for Flower from LEAF you can run the following command. Make sure to change "out_path", "train_data_dir", "test_data_dir" in the script, and be free to change "split". 
+
+```shell
+python generate_flower_data.py
+```
 
 ## Running the project (via Poetry)
 Project dependencies (such as `tensorflow` and `flwr`) are defined in `pyproject.toml` (the modern alternative to `requirements.txt`). I recommend [Poetry](https://python-poetry.org/docs/) to install those dependencies and manage your virtual environment ([Poetry installation](https://python-poetry.org/docs/#installation)), but feel free to use a different way of installing dependencies and managing virtual environments if you have other preferences.
